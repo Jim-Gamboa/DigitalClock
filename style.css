@@ -12,9 +12,9 @@ body {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(45deg, #000000, #000000f4);
-    color: #fff;
+    color: #bf7a7ab0;
     position: relative;
-	background-image: url("https://apod.nasa.gov/apod/image/2511/M31AB.jpg");
+	background-image: url("https://apod.nasa.gov/apod/image/2510/abell2744_jwst.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -91,3 +91,4 @@ body {
     }
 
 }
+
