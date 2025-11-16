@@ -41,7 +41,7 @@ body {
 }
 
 .clock span {
-    font-size: 90px;
+    font-size: 100px;
     font-weight: 550;
     width: 100px;
     display: inline-block;
@@ -89,4 +89,5 @@ body {
         font-size: 65px;
         font-weight: 550;
     }
+
 }
