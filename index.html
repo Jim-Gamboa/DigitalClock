@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock using javaScript </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="mc">
+      <div class="container">
+        <div class="clock">
+            <span id="hrs">10</span>
+            <span>:</span>
+            <span id="min">15</span>
+            <span></span>
+            <span id="sec">am</span>
+        </div>
+        <div class="clock" style="!font-size: 70px;">
+            <span id="dw">Mon</span>
+            <span></span>
+            <span id="mm">Jan</span>
+            <span></span>
+            <span id="day">5</span>
+        </div>
+      </div>  
+    </div>
+    
+    <script>
+		const days = ['Sun','Mon','Tues','Wed','Thu','Fri','Sat'];
+		const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+      var hrs = document.getElementById("hrs");
+      var min = document.getElementById("min");
+      var sec = document.getElementById("sec");
+      var dw = document.getElementById("dw");
+      var mm = document.getElementById("mm");
+      var day = document.getElementById("day");
+      
+      setInterval(()=>{
+      let currentTime = new Date();
+    
+      hrs.innerHTML = (currentTime.getHours()%12<10?"0":"") +  currentTime.getHours()%12;
+      min.innerHTML = (currentTime.getMinutes()<10?"0":"") +  currentTime.getMinutes();
+      sec.innerHTML = (currentTime.getHours()<12?"am":"pm");
+	  dw.innerHTML = (days[ currentTime.getDay() ]);
+	  mm.innerHTML = (months[ currentTime.getMonth() ]);
+	  day.innerHTML = (currentTime.getDate());
+    
+    },1000)
+
+    </script>
+
+</body>
+</html>
