@@ -29,7 +29,7 @@
 			let currentTime = new Date();
 		
 			let timedisplay = 
-				currentTime.getHours()%12 + ':' +
+				(currentTime.getHours()%12==0?"12":currentTime.getHours()%12) + ':' +
 				(currentTime.getMinutes()<10?"0":"") +  currentTime.getMinutes() + ' ' +
 				(currentTime.getHours()<12?"am":"pm");
 			let datedisplay = 
@@ -44,4 +44,5 @@
 
 </body>
 </html>
+
 
